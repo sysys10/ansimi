@@ -15,6 +15,9 @@
 		4CDFF6F5B6CABD8623A5BCB1 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		7699B88040F8A987B510C191 /* libPods-fast-fastTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-fast-fastTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		87ECE18E63324077B09D59EE /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6CFF8D5E93474FFB9B64BD3E /* Pretendard-Regular.otf */; };
+		B4A56B554BC748C7B5A5009A /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33F52AE8C32942D789B1C7A8 /* Pretendard-SemiBold.otf */; };
+		D808BD5B88E54B4A9A1B7CE5 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 67F1C424674546FC961A5C12 /* Pretendard-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +42,13 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = fast/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = fast/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-fast-fastTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fast-fastTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F52AE8C32942D789B1C7A8 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-SemiBold.otf"; path = "../src/assets/fonts/Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-fast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fast.debug.xcconfig"; path = "Target Support Files/Pods-fast/Pods-fast.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-fast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fast.release.xcconfig"; path = "Target Support Files/Pods-fast/Pods-fast.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-fast-fastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fast-fastTests.debug.xcconfig"; path = "Target Support Files/Pods-fast-fastTests/Pods-fast-fastTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-fast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67F1C424674546FC961A5C12 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Bold.otf"; path = "../src/assets/fonts/Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		6CFF8D5E93474FFB9B64BD3E /* Pretendard-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Regular.otf"; path = "../src/assets/fonts/Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = fast/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-fast-fastTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fast-fastTests.release.xcconfig"; path = "Target Support Files/Pods-fast-fastTests/Pods-fast-fastTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -125,6 +131,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				A2FD4ADC92CC409D995E63F3 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -138,6 +145,17 @@
 				00E356EE1AD99517003FC87E /* fastTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A2FD4ADC92CC409D995E63F3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				67F1C424674546FC961A5C12 /* Pretendard-Bold.otf */,
+				6CFF8D5E93474FFB9B64BD3E /* Pretendard-Regular.otf */,
+				33F52AE8C32942D789B1C7A8 /* Pretendard-SemiBold.otf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -247,6 +265,9 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				4CDFF6F5B6CABD8623A5BCB1 /* PrivacyInfo.xcprivacy in Resources */,
+				D808BD5B88E54B4A9A1B7CE5 /* Pretendard-Bold.otf in Resources */,
+				87ECE18E63324077B09D59EE /* Pretendard-Regular.otf in Resources */,
+				B4A56B554BC748C7B5A5009A /* Pretendard-SemiBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

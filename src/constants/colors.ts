@@ -1,49 +1,55 @@
-const common = {
-  PINK_200: '#FAE2E9',
-  PINK_400: '#EC87A5',
-  PINK_500: '#BF5C79',
-  PINK_700: '#C63B64',
-  BLUE_500: '#0D8AFF',
-  RED_500: '#FF5F5F',
-  RED_300: '#FFB4B4',
-  BLUE_400: '#B4E0FF',
-  GREEN_400: '#CCE6BA',
-  YELLOW_400: '#FFE594',
-  YELLOW_500: '#FACC15',
-  PURPLE_400: '#C4C4E7',
-  UNCHANGE_WHITE: '#FFF',
-  UNCHANGE_BLACK: '#000',
-};
-
 const colors = {
-  light: {
-    WHITE: '#FFF',
-    GRAY_100: '#F8F8F8',
-    GRAY_200: '#E7E7E7',
-    GRAY_300: '#D8D8D8',
-    GRAY_500: '#8E8E8E',
-    GRAY_700: '#575757',
-    BLACK: '#161616',
-    ...common,
+  // 메인 색상
+  primary: {
+    main: '#302B5E', // 메인 브랜드 컬러
+    light: '#453D85', // 그라데이션, 하이라이트용
+    dark: '#221F42', // 진한 강조용
   },
-  dark: {
-    WHITE: '#161616',
-    GRAY_100: '#202124',
-    GRAY_200: '#3C4043',
-    GRAY_300: '#5e5e5e',
-    GRAY_500: '#8E8E8E',
-    GRAY_700: '#F8F8F8',
-    BLACK: '#fff',
-    ...common,
+  // 배경
+  background: {
+    primary: '#161616', // colors.bg
+    secondary: '#202124', // colors.bg_secondary
+    card: '#171717', // colors.GRAY_50
+  },
+
+  // 텍스트
+  text: {
+    primary: '#FFFFFF', // colors.text_primary
+    secondary: '#F8F8F8', // colors.text_secondary
+    tertiary: '#8E8E8E', // colors.text_tertiary
+    placeholder: '#8E8E8E', // colors.text_placeholder
+  },
+
+  // 기능성 색상
+  status: {
+    error: '#EC87A5', // colors.text_error, 위험/긴급 상황
+    warning: '#FACC15', // colors.text_warning, 주의 필요
+    success: '#82C766', // colors.text_success, 안전/완료
+    info: '#7CC7FF', // colors.text_link, 정보/링크
+  },
+
+  // 테두리
+  border: {
+    default: '#3C4043', // colors.border
+    focus: '#0D8AFF', // colors.border_focus
+  },
+
+  // 버튼
+  button: {
+    text: '#161616', // colors.text_button
+    disabled: '#5e5e5e', // colors.GRAY_300
+  },
+
+  // 기능별 컴포넌트
+  component: {
+    sos: '#EC87A5', // 긴급 버튼
+    tracking: '#82C766', // 추적 활성화 상태
+    map: {
+      background: '#202124',
+      marker: '#302B5E',
+      route: '#453D85',
+    },
   },
 } as const;
 
-const colorHex = {
-  RED: colors['light'].PINK_400,
-  BLUE: colors['light'].BLUE_400,
-  GREEN: colors['light'].GREEN_400,
-  YELLOW: colors['light'].YELLOW_400,
-  PURPLE: colors['light'].PURPLE_400,
-} as const;
-
-export { colors, colorHex };
+export { colors };

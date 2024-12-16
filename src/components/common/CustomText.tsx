@@ -2,7 +2,6 @@ import React from 'react';
 import { Text } from 'react-native';
 import { fontWeights, ThemedTextProps, typography } from '@/constants';
 import { colors } from '@/constants';
-import useThemeStore from '@/stores/themeStore';
 
 /**style, type, variant, color, weight, props가능.. */
 function CustomText({
@@ -12,11 +11,9 @@ function CustomText({
   weight = 'regular',
   ...props
 }: ThemedTextProps) {
-  const theme = useThemeStore(state => state.theme);
-
   const customStyle = {
     fontFamily: fontWeights[weight],
-    color: colors[theme][`text_${variant}`],
+    color: colors.text[variant],
     ...typography[type],
   };
 

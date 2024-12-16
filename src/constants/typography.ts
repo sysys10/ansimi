@@ -1,15 +1,7 @@
 import responsive from '@/utils/responsive';
 import { StyleSheet, TextProps } from 'react-native';
 
-export type TextVariant =
-  | 'primary'
-  | 'secondary'
-  | 'tertiary'
-  | 'placeholder'
-  | 'link'
-  | 'success'
-  | 'warning'
-  | 'error';
+export type TextVariant = 'primary' | 'secondary' | 'tertiary' | 'placeholder';
 
 export type FontWeight = 'regular' | 'semiBold' | 'bold';
 

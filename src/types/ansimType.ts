@@ -12,8 +12,8 @@ interface NaverPlaceResponse {
 type LocationType = {
   name: string; // 장소명
   address: string; // 주소
-  latitude: string; // 위도
-  longitude: string; // 경도
+  latitude: number; // 위도
+  longitude: number; // 경도
 };
 
 export type { NaverPlaceResponse, LocationType };

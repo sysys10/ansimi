@@ -65,7 +65,7 @@ function MainBottomTabNavigation() {
         name={mainBottomTabNavigationLists.SETTING}
         component={Setting}
         options={{
-          tabBarIcon: CustomIcon('cog-outline'),
+          tabBarIcon: CustomIcon('settings-outline'),
         }}
       />
     </BottomTab.Navigator>

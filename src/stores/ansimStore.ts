@@ -41,7 +41,10 @@ const useAnsimStore = create<useAnsimStoreProps>(set => ({
   getDestinations: () => {
     const savedDestinations = storage.getString(ANSIM_STORAGE_KEY);
     if (savedDestinations) {
-      set({ destinations: JSON.parse(savedDestinations) });
+      const parsed = JSON.parse(savedDestinations);
+      set({
+        destinations: parsed,
+      });
     }
   },
 

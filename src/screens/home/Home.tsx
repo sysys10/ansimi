@@ -1,17 +1,18 @@
 import CustomText from '@/components/common/CustomText';
 import { NightSkyBackground } from '@/components/home/NightSkyBackGround';
 import { colors } from '@/constants';
-import { MainBottomTabNavigationProps } from '@/navigations/bottomTab/mainBottomTabNavigation';
 import responsive from '@/utils/responsive';
 import React, { useCallback, useRef } from 'react';
 import { Pressable, SafeAreaView, StyleSheet, View } from 'react-native';
 import { BottomSheetModal } from '@gorhom/bottom-sheet';
 import { BottomSheetModalMethods } from '@gorhom/bottom-sheet/lib/typescript/types';
 import SafeHomeBottomSheet from '@/components/home/SafeHomeBottomSheet';
+import { MainBottomTabNavigationProps } from '@/navigations/bottomTab/mainBottomTabNavigation';
 
 interface HomeScreenProps {
   navigation: MainBottomTabNavigationProps;
 }
+
 type BottomSheetRef<T = any> = BottomSheetModalMethods<T>;
 
 function Home({ navigation }: HomeScreenProps) {
@@ -53,7 +54,7 @@ function Home({ navigation }: HomeScreenProps) {
         backgroundStyle={{
           backgroundColor: colors.background.secondary,
         }}>
-        <SafeHomeBottomSheet onClose={handleClose} />
+        <SafeHomeBottomSheet navigation={navigation} onClose={handleClose} />
       </BottomSheetModal>
     </SafeAreaView>
   );

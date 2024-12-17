@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
-import useAnsimStore from '@/stores/ansimStore';
 import { colors } from '@/constants';
 import { LocationType } from '@/types';
 
@@ -16,21 +15,20 @@ interface Props {
 }
 
 export function NewDestinationForm({ onSave, onCancel }: Props) {
+  // 실제에선 주소만 검색해서 위도 경도 바꿔서 넣어주는걸로 가자
   const [name, setName] = useState('');
+  const [lang, setLang] = useState('');
+  const [long, setLong] = useState('');
   const [address, setAddress] = useState('');
-  const addDestination = useAnsimStore(state => state.addDestination);
 
   const handleSave = () => {
-    if (!name || !address) return <View />;
-
     const newDestination = {
-      name,
-      address,
-      latitude: '37.5665', // 임시값, 실제로는 주소 검색 API 사용
-      longitude: '126.9780',
+      name: name,
+      address: '집',
+      latitude: parseFloat(lang), // 임시값, 실제로는 주소 검색 API 사용
+      longitude: parseFloat(long),
     };
 
-    addDestination(newDestination);
     onSave(newDestination);
   };
 
@@ -51,13 +49,23 @@ export function NewDestinationForm({ onSave, onCancel }: Props) {
         </View>
 
         <View style={styles.inputContainer}>
-          <Text style={styles.label}>주소</Text>
+          <Text style={styles.label}>위도</Text>
           <TextInput
             style={styles.input}
             placeholder="주소 입력"
             placeholderTextColor={colors.text.placeholder}
-            value={address}
-            onChangeText={setAddress}
+            value={lang}
+            onChangeText={setLang}
+          />
+        </View>
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>경도</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="주소 입력"
+            placeholderTextColor={colors.text.placeholder}
+            value={long}
+            onChangeText={setLong}
           />
         </View>
       </View>

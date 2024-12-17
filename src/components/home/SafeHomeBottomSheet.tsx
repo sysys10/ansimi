@@ -4,30 +4,38 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import useAnsimStore from '@/stores/ansimStore';
 import { colors } from '@/constants';
 import { NewDestinationForm } from './NewDestinationForm';
+import { MainBottomTabNavigationProps } from '@/navigations/bottomTab/mainBottomTabNavigation';
+import { LocationType } from '@/types';
 
 interface Props {
   onClose: () => void;
+  navigation: MainBottomTabNavigationProps;
 }
 
-export default function SafeHomeBottomSheet({ onClose }: Props) {
+export default function SafeHomeBottomSheet({ onClose, navigation }: Props) {
   const [isNewForm, setIsNewForm] = useState(false);
   const snapPoints = useMemo(() => ['50%', '80%'], []);
 
-  const { destinations, selectDestination } = useAnsimStore();
+  const { destinations, selectDestination, addDestination } = useAnsimStore();
 
-  const handleSelectDestination = destination => {
+  const handleSelectDestination = (destination: LocationType) => {
     selectDestination(destination);
+    navigation.navigate('Map');
     onClose();
   };
 
+  const handleSaveForm = destination => {
+    addDestination(destination);
+    console.log(1);
+
+    setIsNewForm(false);
+    console.log(1);
+  };
   if (destinations.length === 0 || isNewForm) {
     return (
       <BottomSheetView style={styles.container}>
         <NewDestinationForm
-          onSave={destination => {
-            handleSelectDestination(destination);
-            setIsNewForm(false);
-          }}
+          onSave={handleSaveForm}
           onCancel={() => setIsNewForm(false)}
         />
       </BottomSheetView>
